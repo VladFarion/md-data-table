@@ -58,6 +58,7 @@ function mdTablePagination() {
     };
 
     self.onPaginationChange = function () {
+      debugger
       if(angular.isFunction(self.onPaginate)) {
         $mdUtil.nextTick(function () {
           self.onPaginate(self.page, self.limit);
