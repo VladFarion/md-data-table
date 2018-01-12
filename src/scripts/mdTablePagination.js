@@ -58,11 +58,8 @@ function mdTablePagination() {
     };
 
     self.onPaginationChange = function () {
-      console.trace();
       if(angular.isFunction(self.onPaginate)) {
-        $mdUtil.nextTick(function () {
-          self.onPaginate(self.page, self.limit);
-        });
+        self.onPaginate(self.page, self.limit);
       }
     };
 
